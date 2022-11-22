@@ -1,0 +1,18 @@
+.login-bg {
+  background-color: $yellow;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.login-form {
+  max-width: 400px;
+}
+
+.login-image {
+  max-width: 350px;
+}
