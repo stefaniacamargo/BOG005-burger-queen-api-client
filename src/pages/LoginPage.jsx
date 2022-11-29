@@ -25,9 +25,10 @@ function Login() {
       try {
         const response = await userPetition(emailUser, passwordUser);
         setErrorMessage('');
+        localStorage.setItem('jwt', response.data.accessToken);
+        localStorage.setItem('user', response.data.user.email);
         if (response.data.user.role === 'admin') {
-          console.log('Tienes acceso');
-          navigate('/admin-products');
+          navigate('/admin');
         }
       } catch (error) {
         setIsLoading(false);

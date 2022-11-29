@@ -8,6 +8,13 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
   },
+  devServer: {
+    open: true,
+    historyApiFallback: true,
+    compress: true,
+    port: 3000,
+    hot: true,
+  },
   mode: 'development',
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -61,6 +68,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './public/index.html',
       filename: './index.html',
+      publicPath: '/',
     }),
   ],
 };

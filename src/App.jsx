@@ -1,16 +1,33 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './styles/main.scss';
-import Login from './components/Login';
+
+// Components
+import ProtectedRoute from './components/ProtectedRoute';
+
+// Pages
+import LoginPage from './pages/LoginPage';
+import NotFoundPage from './pages/NotFoundPage';
+import AdminPage from './pages/AdminPanel/AdminPage';
+import AdminProductsPage from './pages/AdminPanel/AdminProductsPage';
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Login />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<LoginPage />} />
+        <Route
+          path="admin"
+          element={
+            <ProtectedRoute>
+              <AdminPage />
+            </ProtectedRoute>
+          }
+        >
+          <Route path="products" element={<AdminProductsPage />} />
+        </Route>
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
