@@ -61,4 +61,7 @@
 @import "~bootstrap/scss/utilities/api";
 
 // 8. Add additional custom code here
+@import 'base/global';
 @import 'pages/login';
+@import 'pages/admin';
+@import 'pages/waiter';

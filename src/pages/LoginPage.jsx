@@ -1,7 +1,7 @@
 import { useState, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import urbanBurger from '../../public/Urban Burger (6).png';
-import userPetition from '../../Utils/petitions';
+import { userPetition } from '../../Utils/petitions';
 
 function Login() {
   const navigate = useNavigate();

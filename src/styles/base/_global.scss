@@ -1,24 +1,13 @@
 * {
   box-sizing: border-box;
 }
-body, html {
+
+body,
+html {
   font-size: 14px;
-  background-color: #FFDE59;
-  font-family: 'Kanit', sans-serif;
+  background-color: $dark;
 
   @media only screen and (min-width: 768px) {
     font-size: 16px;
   }
-}
-
-.Logo {
-  width: 25%;
-  display:flex;
-}
-
-.Login {
-  background-color: black;
-  color: white;
-  width:100%;
-  max-width:400px; 
 }

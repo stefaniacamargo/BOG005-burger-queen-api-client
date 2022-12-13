@@ -9,6 +9,8 @@ import LoginPage from './pages/LoginPage';
 import NotFoundPage from './pages/NotFoundPage';
 import AdminPage from './pages/AdminPanel/AdminPage';
 import AdminProductsPage from './pages/AdminPanel/AdminProductsPage';
+import WaiterPage from './pages/WaiterPage';
+import ChefPage from './pages/ChefPage';
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
           <Route path="products" element={<AdminProductsPage />} />
         </Route>
         <Route path="*" element={<NotFoundPage />} />
+        <Route path="waiter" element={<WaiterPage />} />
+        <Route path="chef" element={<ChefPage />} />
       </Routes>
     </BrowserRouter>
   );

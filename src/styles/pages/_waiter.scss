@@ -1,0 +1,46 @@
+.navBar {
+  background-color: $yellow;
+}
+
+.userLogo {
+  width: 50px;
+  margin-left: 90%;
+}
+
+.title {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 20px;
+  color: $second;
+}
+
+p {
+  color: black;
+  text-align: center;
+}
+
+.sectionOptions {
+  margin: 11%;
+}
+
+.form-select {
+  width: 20%;
+  background-color: $primary;
+  font-weight: bold;
+}
+
+.container-menu {
+  background-color: $second;
+  width: 20%;
+}
+
+.container-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
